@@ -1,3 +1,46 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-box');
+    const dots = document.querySelectorAll('.dot');
+
+    function showTestimonial(index) {
+        testimonials.forEach(testimonial => {
+            testimonial.style.opacity = '0';
+            testimonial.style.transform = 'translateX(100%)';
+            testimonial.style.display = 'none';
+        });
+        
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        testimonials[index].style.display = 'block';
+        setTimeout(() => {
+            testimonials[index].style.opacity = '1';
+            testimonials[index].style.transform = 'translateX(0)';
+        }, 50);
+        dots[index].classList.add('active');
+    }
+
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+
+    // Auto slide every 5000ms (5 seconds)
+    setInterval(nextTestimonial, 5000);
+
+    // Initialize first testimonial
+    showTestimonial(0);
+
+    // Add click handlers for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentTestimonial = index;
+            showTestimonial(currentTestimonial);
+        });
+    });
+});
+
 // Add smooth scrolling to navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', event => {
@@ -94,10 +137,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleMenu() {
-  const navLinks = document.getElementById("navLinks");
-  navLinks.classList.toggle("active");
-}
-
-
-
+  const navLinks = document.querySelector(".nav-links");
+  const menuIcon = document.querySelector(".menu-icon");
+  const menuOverlay = document.querySelector(".menu-overlay");
   
+  navLinks.classList.toggle("active");
+  menuIcon.classList.toggle("active");
+  menuOverlay.classList.toggle("active");
+  menuIcon.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
+  
+  document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+  
+  // Close menu when clicking on links
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuIcon.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuIcon.textContent = "☰";
+      document.body.style.overflow = "auto";
+    });
+  });
+}

@@ -9,6 +9,7 @@
 
 </head>
 <body>
+  <div class="menu-overlay" onclick="toggleMenu()"></div>
   <header class="navbar">
     <div class="logo">Growthy</div>
     <nav>
@@ -17,18 +18,18 @@
         <li><a href="#service">Service</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#testimonial">Testimonial</a></li>
-        <li class="contactnav"><a href="#contact">contact</a></li>
-        
+        <li class="contactnav"><a href="#contact">Contact</a></li>
+
       </ul>
-      <div class="menu-icon" onclick="toggleMenu()">
+      <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle Menu">
         ☰
-    </div>
+      </div>
     </nav>
   </header>
 
   <section class="hero">
     <h1>Lorem ipsum dolor ipsum id. <br> dolor sit amet </h1>
-    <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper posuere nunc elementum vulputate eget mauris at.<br> consectetur. Ullamcorper posuere nunc elementum vulputate e</p>
+    <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper posuere nunc elementum vulputate eget.<br> consectetur. Ullamcorper posuere nunc elementum vulputate e</p>
     <button class="cta-btn">Get started - It's Free</button>
     <div class="features">
         <div class="feature">
@@ -53,7 +54,7 @@
   </section>
 
 
-  
+
 
   <script src="script.js"></script>
 
@@ -68,39 +69,51 @@
   <section class="services-section">
     <div class="container">
       <div class="section-header">
-        <span class="tagline">Lorem Ipsum</span>
-        <h1>Lorem ipsum dolor sit amet consectetur <br> sit amet consectetu </h1>
+        <span class="tagline">Lorem ipsum</span>
+        <h1>Lorem ipsum dolor sit amet consectetu</h1>
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="icon">🏅</div>
+          <div class="icon">
+            <img src="attached_assets/fi_10729180.png" alt="Brand Identity Icon">
+          </div>
           <h3>Brand Identity design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
         <div class="service-card">
-          <div class="icon">🌐</div>
+          <div class="icon">
+            <img src="attached_assets/fi_16007795.png" alt="Website Design Icon">
+          </div>
           <h3>Website design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
         <div class="service-card">
-          <div class="icon">📱</div>
+          <div class="icon">
+            <img src="attached_assets/fi_4067840.png" alt="Application Design Icon">
+          </div>
           <h3>Application design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
         <div class="service-card">
-          <div class="icon">🏅</div>
+          <div class="icon">
+            <img src="attached_assets/fi_10729180.png" alt="Brand Identity Icon">
+          </div>
           <h3>Brand Identity design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
         <div class="service-card">
-          <div class="icon">🌐</div>
+          <div class="icon">
+            <img src="attached_assets/fi_16007795.png" alt="Website Design Icon">
+          </div>
           <h3>Website design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
         <div class="service-card">
-          <div class="icon">📱</div>
+          <div class="icon">
+            <img src="attached_assets/fi_4067840.png" alt="Application Design Icon">
+          </div>
           <h3>Application design</h3>
-          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus una mauris viverra.</p>
+          <p>Lorem ipsum dolor sit amet consectetur. Tempor ac eget integer erat. Sed quam lorem tellus arcu placerat faucibus urna mauris viverra. Ac mattis ullamcorper dignissim integer faucibus cursus tortor.</p>
         </div>
       </div>
     </div>
@@ -113,18 +126,24 @@
       <div class="card">
         <div class="text-section">
           <span class="label">Lorem Ipsum</span>
-          <h1>Lorem ipsum dolor sit amet consectetur</h1>
-          <p>Lorem ipsum dolor sit amet consectetur. Maleuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
-          <ul>
-            <li>✔ Lorem ipsum dolor.</li>
-            <li>✔ Lorem ipsum dolor.</li>
-          </ul>
+          <h1>Lorem ipsum dolor sit amet consectetu</h1>
+          <p>Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="check-icon">✓</div>
+              <span>Lorem ipsum dolor.</span>
+            </div>
+            <div class="feature-item">
+              <div class="check-icon">✓</div>
+              <span>Lorem ipsum dolor.</span>
+            </div>
+          </div>
         </div>
         <div class="image-section">
           <img src="image2.jpg" alt="SEO Optimization">
         </div>
       </div>
-  
+
       <!-- Second Card -->
       <div class="card">
         <div class="image-section">
@@ -132,17 +151,23 @@
         </div>
         <div class="text-section">
           <span class="label">Lorem Ipsum</span>
-          <h1>Lorem ipsum dolor sit amet consectetur</h1>
-          <p>Lorem ipsum dolor sit amet consectetur. Maleuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
-          <ul>
-            <li>✔ Lorem ipsum dolor.</li>
-            <li>✔ Lorem ipsum dolor.</li>
-          </ul>
+          <h1>Lorem ipsum dolor sit amet consectetu</h1>
+          <p>Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="check-icon">✓</div>
+              <span>Lorem ipsum dolor.</span>
+            </div>
+            <div class="feature-item">
+              <div class="check-icon">✓</div>
+              <span>Lorem ipsum dolor.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
 
 
 
@@ -179,23 +204,58 @@
             <!-- Left Content -->
             <div class="text-content3">
                 <span class="tagline3">Lorem Ipsum</span>
-                <h1 class="h13">Lorem ipsum dolor sit amet consectetu</h1>
-                <p class="p13">Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
+                <h1 class="h13">Lorem ipsum dolor sit amet consectetu m dolor sit a</h1>
+                <p class="p13">Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam verra faucibus eu vulputate interdum.</p>
             </div>
-            
+
             <!-- Right Testimonial Box -->
-            <div class="testimonial-box">
-                <div class="testimonial-content">
-                    <p class="testimonial-text">
-                        I had a persistent termite problem, but the experts at this pest control company handled it with ease.
-                        They were knowledgeable, responsive, and delivered results beyond my expectations.
-                    </p>
+            <div class="testimonials-container">
+                <div class="testimonial-box active" data-index="0">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">I had a persistent termite problem, but the experts at this pest control company handled it with ease. They were knowledgeable, responsive, and delivered results beyond my expectations.</p>
+                    </div>
+                    <div class="author">
+                        <img src="image4.jpg" alt="User Image">
+                        <div class="author-info">
+                            <strong>Aadesh Sahane</strong>
+                            <span>Dhule, India</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="author">
-                    <img src="image4.jpg" alt="User Image">
-                    <div class="author-info">
-                        <strong>Aadesh Sahane</strong>
-                        <span>Dhule, India</span>
+                <div class="testimonial-box" data-index="1">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">The design process was seamless and professional. They took our vision and transformed it into a stunning reality that exceeded our expectations.</p>
+                    </div>
+                    <div class="author">
+                        <img src="image4.jpg" alt="User Image">
+                        <div class="author-info">
+                            <strong>John Doe</strong>
+                            <span>New York, USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-box" data-index="2">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Outstanding service and attention to detail. The team was responsive and delivered our project ahead of schedule.</p>
+                    </div>
+                    <div class="author">
+                        <img src="image4.jpg" alt="User Image">
+                        <div class="author-info">
+                            <strong>Jane Smith</strong>
+                            <span>London, UK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-box" data-index="3">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Incredible results! The website they created for us has significantly improved our online presence and user engagement.</p>
+                    </div>
+                    <div class="author">
+                        <img src="image4.jpg" alt="User Image">
+                        <div class="author-info">
+                            <strong>Mike Johnson</strong>
+                            <span>Sydney, Australia</span>
+                        </div>
                     </div>
                 </div>
                 <div class="dots">
@@ -207,7 +267,7 @@
             </div>
         </div>
     </section>
-  
+
 
 
 
@@ -222,7 +282,7 @@
           <div class="form-box">
               <h2 class="h26">Get in Touch with Us</h2>
               <p class="p6">We'd love to hear from you! Whether you have questions about our digital marketing services, want to discuss a potential project, or simply want to chat about the latest trends in the digital world, our team is here to connect with you.</p>
-              
+
               <form id="contactForm">
                   <input type="text" placeholder="Your Name" required>
                   <input type="email" placeholder="Your Email" required>

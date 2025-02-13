@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     let currentTestimonial = 0;
     const testimonials = document.querySelectorAll('.testimonial-box');
@@ -44,11 +43,42 @@ document.addEventListener('DOMContentLoaded', function() {
 // Add smooth scrolling to navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', event => {
-      event.preventDefault();
-      const targetId = event.target.getAttribute('href').substring(1);
-      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        event.preventDefault();
+        const targetId = event.target.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            // Close mobile menu if open
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menu-icon');
+            const menuOverlay = document.querySelector('.menu-overlay');
+
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuIcon.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                menuIcon.textContent = "☰";
+                document.body.style.overflow = "auto";
+            }
+
+            // Smooth scroll with animation
+            window.scrollTo({
+                top: targetSection.offsetTop - 80, // Adjust for navbar height
+                behavior: 'smooth'
+            });
+
+            // Add fade-in animation to the target section
+            targetSection.style.opacity = "0";
+            targetSection.style.transform = "translateY(20px)";
+            targetSection.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+
+            setTimeout(() => {
+                targetSection.style.opacity = "1";
+                targetSection.style.transform = "translateY(0)";
+            }, 300);
+        }
     });
-  });
+});
   
   // Example animation on button click
   document.querySelector('.cta-btn').addEventListener('click', () => {
@@ -158,4 +188,12 @@ function toggleMenu() {
       document.body.style.overflow = "auto";
     });
   });
+}
+
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  navLinks.classList.toggle('active');
+  menuOverlay.classList.toggle('active');
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="menu-overlay" onclick="toggleMenu()"></div>
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="logo">Growthy</div>
     <nav>
       <ul class="nav-links">
@@ -19,15 +19,16 @@
         <li><a href="#about">About</a></li>
         <li><a href="#testimonial">Testimonial</a></li>
         <li class="contactnav"><a href="#contact">Contact</a></li>
-
       </ul>
       <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle Menu">
         ☰
       </div>
     </nav>
   </header>
+  
+  
 
-  <section class="hero">
+  <section id="home" class="hero">
     <h1>Lorem ipsum dolor ipsum id. <br> dolor sit amet </h1>
     <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper posuere nunc elementum vulputate eget.<br> consectetur. Ullamcorper posuere nunc elementum vulputate e</p>
     <button class="cta-btn">Get started - It's Free</button>
@@ -66,7 +67,7 @@
 
 
 
-  <section class="services-section">
+  <section id="service" class="services-section">
     <div class="container">
       <div class="section-header">
         <span class="tagline">Lorem ipsum</span>
@@ -120,29 +121,9 @@
   </section>
 
 
-  <section class="design-section">
+  <section id="about" class="design-section">
     <div class="container2">
-      <!-- First Card -->
-      <div class="card">
-        <div class="text-section">
-          <span class="label">Lorem Ipsum</span>
-          <h1>Lorem ipsum dolor sit amet consectetu</h1>
-          <p>Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="check-icon">✓</div>
-              <span>Lorem ipsum dolor.</span>
-            </div>
-            <div class="feature-item">
-              <div class="check-icon">✓</div>
-              <span>Lorem ipsum dolor.</span>
-            </div>
-          </div>
-        </div>
-        <div class="image-section">
-          <img src="image2.jpg" alt="SEO Optimization">
-        </div>
-      </div>
+     
 
       <!-- Second Card -->
       <div class="card">
@@ -164,6 +145,27 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+     <!-- First Card -->
+     <div class="card">
+      <div class="text-section">
+        <span class="label">Lorem Ipsum</span>
+        <h1>Lorem ipsum dolor sit amet consectetu</h1>
+        <p>Lorem ipsum dolor sit amet consectetur. Malesuada viverra faucibus eu vulputate interdum lectus consectetur quam.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="check-icon">✓</div>
+            <span>Lorem ipsum dolor.</span>
+          </div>
+          <div class="feature-item">
+            <div class="check-icon">✓</div>
+            <span>Lorem ipsum dolor.</span>
+          </div>
+        </div>
+      </div>
+      <div class="image-section">
+        <img src="image2.jpg" alt="SEO Optimization">
       </div>
     </div>
   </section>
@@ -199,7 +201,7 @@
 
 
 
-  <section class="hero-section3">
+  <section id="testimonial" class="hero-section3">
         <div class="container4">
             <!-- Left Content -->
             <div class="text-content3">
@@ -271,7 +273,7 @@
 
 
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <div class="contact-container">
           <!-- Left Image -->
           <div class="image-box">

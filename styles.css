@@ -355,6 +355,7 @@ section {
 
   .hero h1 {
     font-size: 32px;
+    margin-top: 0rem;
   }
 
   .hero p {
